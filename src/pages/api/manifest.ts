@@ -14,6 +14,7 @@ export default createManifestHandler({
          * Set permissions for app if needed
          * https://docs.saleor.io/docs/3.x/developer/permissions
          */
+        "MANAGE_CHECKOUTS"
       ],
       id: "saleor.app",
       version: packageJson.version,
@@ -29,6 +30,13 @@ export default createManifestHandler({
          * Optionally, extend Dashboard with custom UIs
          * https://docs.saleor.io/docs/3.x/developer/extending/apps/extending-dashboard-with-apps
          */
+        {
+          label: "Abandoned Checkouts",
+          mount: "NAVIGATION_ORDERS",
+          target: "APP_PAGE",
+          permissions: ["MANAGE_CHECKOUTS"],
+          url: "/",
+        }
       ],
     };
 
