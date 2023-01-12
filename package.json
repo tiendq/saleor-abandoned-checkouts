@@ -1,7 +1,6 @@
 {
   "name": "abandoned-checkouts",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "dev": "pnpm generate && NODE_OPTIONS='--inspect' next dev",
     "build": "pnpm generate && next build",
